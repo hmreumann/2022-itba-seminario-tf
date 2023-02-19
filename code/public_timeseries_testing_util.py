@@ -9,7 +9,6 @@ from typing import Sequence, Tuple
 
 import pandas as pd
 
-
 class MockApi:
     def __init__(self):
         '''
@@ -22,9 +21,14 @@ class MockApi:
                 A call to iter_test serves all rows of all dataframes with the current group ID value.
             export_group_id_column: if true, the dataframes iter_test serves will include the group_id_column values.
         '''
-        self.input_paths: Sequence[str] =
-        self.group_id_column: str =
-        self.export_group_id_column: bool =
+        self.input_paths: Sequence[str] = [
+            '/usr/local/dataset/example_test_files/test.csv',
+            '/usr/local/dataset/example_test_files/test_peptides.csv',
+            '/usr/local/dataset/example_test_files/test_proteins.csv',
+            '/usr/local/dataset/example_test_files/sample_submission.csv',
+        ]
+        self.group_id_column: str = 'group_key'
+        self.export_group_id_column: bool = 1
         # iter_test is only designed to support at least two dataframes, such as test and sample_submission
         assert len(self.input_paths) >= 2
 
