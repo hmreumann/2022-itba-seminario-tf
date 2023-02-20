@@ -14,3 +14,9 @@ After starting the environment, run the [Airflow Dashobard](http://localhost:909
 Trigger amp_test_demo DAG, and look for the Log to see the results of the AMP API.
 
 Ref.: [Basic API Demo](https://www.kaggle.com/code/sohier/basic-api-demo)
+
+## AMP Manual Estimate Baseline
+Trigger amp_manual_estimate_baseline DAG. Ref.: [Manual Estimate Baseline](https://www.kaggle.com/code/danielpeshkov/manual-estimate-baseline)
+
+## AMP Random Forest (FAILING)
+We need to somehow install sklearn in the airflow container.
